@@ -1,0 +1,177 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+body {
+  background-color: black;
+  font-family: "Press Start 2P", monospace;
+  color: white;
+}
+
+/* Logo do IFCE */
+.ifce-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  color: #222;
+  text-shadow: 2px 2px 0 #ddd;
+}
+
+/* Moldura estilo GAME BOY */
+.gameboy-frame {
+  width: 85%;
+  height: 850px;
+  margin: 20px auto;
+  padding: 20px;
+
+  background: linear-gradient(180deg, #9da799, #8b9488);
+  border: 12px solid #4d4d4d;
+  border-radius: 18px;
+
+  box-shadow: 0 0 25px #0009, inset 0 0 30px #0006;
+  position: relative;
+}
+
+/* Tela do jogo */
+.game-board {
+  width: 100%;
+  height: 700px;
+  position: relative;
+  overflow: hidden;
+
+  border: 6px solid #000;
+  border-radius: 12px;
+
+  background: linear-gradient(#8cd1ff, #cdeaff);
+  box-shadow: inset 0 0 15px #0008;
+}
+
+/* CRT overlay */
+.crt {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.05) 1px,
+    rgba(0, 0, 0, 0.08) 2px
+  );
+  opacity: 0.35;
+  mix-blend-mode: overlay;
+}
+
+/* Mario */
+.mario {
+  width: 150px;
+  position: absolute;
+  bottom: 0;
+}
+
+/* Nuvens */
+.clouds {
+  position: absolute;
+  width: 550px;
+  animation: clouds-animation 20s infinite linear;
+}
+
+/* Score */
+.score-display {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.65);
+  border-radius: 6px;
+  color: #000;
+  font-weight: bold;
+  border: 2px solid #000;
+}
+
+/* Leaderboard */
+.leaderboard {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  background: rgba(255, 255, 255, 0.55);
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 2px solid #000;
+  color: #000;
+}
+
+.leaderboard h3 {
+  font-size: 18px;
+}
+
+.leaderboard-list li {
+  list-style: none;
+  font-size: 16px;
+}
+
+/* Inimigos */
+.enemy {
+  position: absolute;
+  bottom: 0;
+  animation: enemy-move linear forwards;
+}
+
+@keyframes enemy-move {
+  from {
+    right: -150px;
+  }
+  to {
+    right: 100%;
+  }
+}
+
+/* Nuvens */
+@keyframes clouds-animation {
+  from {
+    right: -550px;
+  }
+  to {
+    right: 100%;
+  }
+}
+
+/* GAME OVER */
+.game-over-screen {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+
+  border-radius: 18px;
+}
+
+.game-over-screen h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.game-over-screen button {
+  padding: 12px 26px;
+  background: #4caf50;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 12px #000;
+  transition: 0.2s;
+}
+
+.game-over-screen button:hover {
+  background: #6fd16f;
+  transform: scale(1.07);
+}

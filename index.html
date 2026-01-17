@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/stylesheet/style.css" />
+
+    <!-- Fonte Retro -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="shortcut icon"
+      href="https://cdn-icons-png.flaticon.com/512/1451/1451303.png"
+      type="image/x-icon"
+    />
+
+    <script src="js/script.js" defer></script>
+    <title>Mario Runner</title>
+  </head>
+
+  <body>
+    <div class="gameboy-frame">
+      <div class="ifce-logo">
+        <h1>IFCE - ADS S1 NOTURNO</h1>
+      </div>
+
+      <!-- Tela de jogo -->
+      <div class="game-board">
+        <div class="enemies-container"></div>
+
+        <img src="assets/imgs/mario.gif" class="mario" />
+        <img src="assets/imgs/clouds.png" class="clouds" />
+
+        <div class="score-display">0</div>
+
+        <div class="leaderboard">
+          <h3>TOP 3</h3>
+          <ul class="leaderboard-list">
+            <li>---</li>
+            <li>---</li>
+            <li>---</li>
+          </ul>
+        </div>
+
+        <!-- Efeito CRT -->
+        <div class="crt"></div>
+      </div>
+
+      <div class="game-over-screen">
+        <h1>GAME OVER</h1>
+        <button onclick="restartGame()">Jogar de Novo</button>
+      </div>
+    </div>
+  </body>
+</html>
