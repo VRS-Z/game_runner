@@ -25,15 +25,13 @@ Ele foi criado para demonstrar conhecimentos fundamentais de desenvolvimento de 
 ✔️ Obstáculos variados e gerados automaticamente  
 ✔️ Contador de pontos baseado no tempo e na distância  
 ✔️ Dificuldade dinâmica  
-✔️ Sons e efeitos visuais (opcional)  
 ✔️ Tela de game over com opção de reiniciar  
 
 ---
 
 ## 🛠️ Tecnologias Utilizadas
 
-- **Linguagem:** JavaScript / C# / (coloque a sua)
-- **Engine:** Unity / Phaser / Godot / (coloque a sua)
+- **Linguagem:** JavaScript 
 - **Assets:** Sprites do Mario e cenários inspirados no estilo clássico da Nintendo  
 *(utilizados apenas para fins educacionais / não comerciais)*
 
